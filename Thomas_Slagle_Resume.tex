@@ -6,9 +6,33 @@
 \usepackage{enumitem}
 \usepackage{hyperref}
 \usepackage{microtype}
+\usepackage{colortbl}
 \usepackage[margin=1.0in]{geometry}
 
+
+\def\doubleline{
+    \hspace{\fill}\color{blue}\line(1,0){465}\hspace{\fill}
+}
+
+
+\newenvironment{indentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{#1}}%
+	\item[]%
+}
+{\end{list}}
+
+
+\newenvironment{unindentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{-0.5#1}}%
+	\item[]%
+}
+{\end{list}}
+
+
 \setlist{nolistsep,leftmargin=*}
+
 \begin{document}
 
 \title{Resume}
@@ -18,13 +42,81 @@
 \thispagestyle{empty}
 \pagestyle{empty}
 
+
 \begin{center}
     {\LARGE\textbf{T}\Large\textbf{HOMAS} \LARGE\textbf{S}\Large\textbf{LAGLE}} \\
-    Irvine, CA $\mid$ 916.342.4423 $\mid$ tslagle@uci.edu $\mid$ in/thomasslagle99\hrule\hrule
-
+    Irvine, CA $\mid$ 916.342.4423 $\mid$ tslagle@uci.edu $\mid$ in/thomasslagle99\doubleline
 \end{center}
 
-\vspace{0.15in}\noindent
+%\vspace{0.15in}\noindent
+%\begin{tabular}\
+
+\noindent{\LARGE\textbf{Education:}}
+
+\begin{indentsection}{\parindent}
+    \textbf{University of California, Irvine (UCI) \hfill Expected: June 2021}\\
+    \textit{Bachelor of Science in Aerospace Engineering \hfill GPA: 3.59/4.00}
+\end{indentsection}
+
+
+\noindent{\LARGE\textbf{Experience:}}
+
+\begin{indentsection}{\parindent}
+    \textbf{Physical \& Dimensional Metrology Intern \hfill June 2019 - Present}\\
+    \textit{Northrop Grumman Corporation \hfill Redondo Beach, CA}
+    \begin{itemize}
+        \item Utilized Microsoft Excel to confirm calibration traceability, and calculate measurement uncertainty for standards.
+        \item Rewrote calibration procedures and reformatted outdated documentation, using Enovia PLM Software
+        \item Assisted with on-site calibrations of equipment and filed Equipment Performance Reports for Out-of-Tolerance equipment
+        \item Used NX to make part and drawing files for various adapters to be machined for the use of new calibration systems
+    \end{itemize}
+
+    \vspace{0.08in}
+
+    \textbf{Student Staff \hfill May 2018 - June 2019}\\
+    \textit{UCI Office of Access and Inclusion  \hfill Irvine, CA}
+    \begin{itemize}
+        \item Taught students essential engineering principles usch as SolidWorks design, introductory mechanics, and Python Programming
+        \item Assisted students to deisgn and fabricate projects related to the Intertnet-of-Things (IOT) with Raspberry Pi implementation and additive manufacturing techniques
+    \end{itemize}
+\end{indentsection}
+
+
+\noindent{\LARGE\textbf{Projects:}}
+
+\begin{indentsection}{\parindent}
+    \textbf{Undergraduate Researcher \hfill Nov 2018 - Present}\\
+    \textit{JMS Research Group, UCI Dep. of Materials Science \hfill Irvine, CA}
+    \begin{itemize}
+        \item Performed sample preparation procedures (cutting, mounting, polishing/grinding, and etching) of 316L Stainless Steel parts made using Selective Laser Melting (SLM), utilized a Scanning Electron Microscope (SEM) for data collection
+        \item Utilized ImageJ and Microsoft Excel to analyze SEM images for average grain size and correlate this to cooling rates
+        \item In the process of writing a research paper to be submitted for publishing on the results from the Study
+    \end{itemize}
+
+    \vspace{0.08in}
+
+    \textbf{Mechanical lead Engineer \hfill April 2018 - Present}\\
+    \textit{UCI Solar Car Team \hfill Irvine, CA}
+    \begin{itemize}
+        \item Oversee and manage a team of fifteen engineering students
+        \item Organized, provided oversight, and participated in all in-house built-to-spec manufacturing endevours
+        \item Create and maintain standardized documentation: including part drawings, CAD revisions, and purchase orders
+        \item Finalized suspension sub-assembly and upright deisng by conducting Finite Element Analysis (FEA) for topology optimization
+    \end{itemize}
+\end{indentsection}
+
+\noindent{\LARGE\textbf{Skills:}}\\
+SolidWorks (CSWA) \hfill Additive Manufacturing (PLA, Stainless Steel) \hfill Arduino and Raspberry Pi\\
+Microsoft Office Suite \hfill LEXI FEI Magellan SEM Operation \hfill Python Programming\\
+MATLAB \hfill ANSYS (Cornell-X Certified CFD \& FEA) \hfill Manual Machining (Mill \& Lathe)
+
+\vspace{0.15in}
+
+\noindent{\LARGE\textbf{Honors and Awards:}}\\
+2020 Measurement Science Conference Scholar \hfill March 2020\\
+Undergraduate Research Opprotunity Program Scholar \hfill Academic Year 2019-2020\\
+Undergraduate Research Opprotunity Program Scholar \hfill Academic Year 2018-2019
+%\end{tabular}
 
 
 \end{document}
